@@ -34,8 +34,9 @@ gem 'bootstrap-sass', '~> 3.3.4'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 group :production, :test do
-	gem 'pg'
+	gem 'pg', '~> 0.18.1'
 	gem 'rails_12factor'
+end
 
 
 
