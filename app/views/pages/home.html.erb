@@ -1,5 +1,14 @@
 <div class = "jumbotron center" >
 <h1>Welcome to Dentists</h1>
-<p>Sign Up <%= link_to "here", "#", class:"btn btn-default" %></p>
-<p>Log in <%= link_to "here", "#", class:"btn btn-default" %></p>
+
+
+<% if user_signed_in? %>
+#do sthg
+<% else %>
+	<p>
+	<%= link_to "Log in", new_user_session_path, class:"btn btn-default" %>
+	<%= link_to "Sign up", new_user_registration_path, class:"btn btn-default" %>
+	</p>
+	<% end %>
+
 </div>
